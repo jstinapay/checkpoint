@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: "Poppins";
+
+}
+
+nav {
+    width: 50%;
+    margin: auto;
+    padding: 20px 0;
+    border-radius: 20px;
+    border: 1px solid rgb(39, 35, 35);
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+nav li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+nav ul li a.active {
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+}
+
+nav ul li a:hover {
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    transition: 300ms;
+}
+
+main {
+    text-align: center;
+    margin-top: 80px;
+
+    h1.logo {
+        font-size: 100px;
+        font-weight: 800;
+    }
+
+    dl {
+        width: 30%;
+        text-align: left;
+        display: inline-block;
+        margin: 40px 20px 0 20px;
+        height: 225px;
+        border: 1px solid rgb(39, 35, 35);
+        padding: 20px;
+        border-radius: 20px;
+        vertical-align: top;
+
+        dt {
+            font-size: 20px;
+        }
+        p, dd {
+            text-align: justify;
+        }
+
+        span {
+            font-weight: 800;
+        }
+
+    }
+}
+
+.login-btn {
+    margin: auto;
+    display: block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.login-btn:hover a {
+    color: white;
+}
+
+button:hover {
+        background-color: black;
+        color: white;
+        transition: 300ms;
+}
+
+
