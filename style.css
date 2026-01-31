@@ -218,7 +218,16 @@ main dl span {
     display: block;
     padding: 8px 25px;
     font-size: clamp(16px, 4vw, 20px);
-    background-color: var(--btn-clr);
+    background: 
+        linear-gradient(currentColor 0 0) 100% 0,
+        linear-gradient(currentColor 0 0) 0 0,
+        linear-gradient(currentColor 0 0) 0 100%,
+        linear-gradient(currentColor 0 0) 100% 100%,
+        radial-gradient(farthest-side, transparent calc(100% - 150px), black 0) 
+        center /var(--d, 600px) var(--d, 600px) no-repeat,
+        var(--btn-clr);
+    background-size: var(--line-d, 0) 3px, 3px var(--line-d, 0), var(--line-d, 0) 3px, 3px var(--line-d, 0), var(--d, 600px) var(--d, 600px), 100% 100%;
+    background-repeat: no-repeat;
     border: none;
     cursor: pointer;
     transition: all 0.35s ease-in-out;
@@ -229,9 +238,10 @@ main dl span {
 }
 
 .login-btn:hover {
-    background-color: black;
-    color: white;
-    border: 1px solid white;
+    --line-d: 100%;
+    --d: 300px;
+    color: #fff;
+    transition: 0.5s;
 }
 
 .login-btn:hover a {
@@ -321,7 +331,7 @@ main dl span {
 }
 
 .register-page .site-footer {
-    margin-top: 11em;
+    margin-top: 0;
 }
 
 .footer-container {
@@ -763,7 +773,7 @@ main dl span {
 }
 
 .login-page .site-footer {
-    margin-top: 10em;
+    margin-top: 0;
 }
 
 .login-hero {
