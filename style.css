@@ -5,6 +5,7 @@
     --line-clr: rgb(39, 35, 35);
     --text-clr: white;
     --flag-clr: white;
+    --btn-clr: #00AAFF;
 }
 
 * {
@@ -24,18 +25,17 @@ body {
 
 nav {
     width: 90%;
+    display: flex;
+    justify-content: center;
     max-width: 600px;
     margin: auto;
     padding: 20px;
-    border-radius: 20px;
-    border: 1px solid var(--line-clr);
 }
 
 nav ul {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
+    gap: 10em;
 }
 
 nav li {
@@ -48,6 +48,7 @@ nav ul li a {
     font-size: clamp(16px, 4vw, 20px);
     transition: all 0.3s ease-in-out;
     display: block;
+
 }
 
 nav ul li a.active {
@@ -58,138 +59,139 @@ nav ul li a:hover {
     border-radius: 20px;
     background-color: var(--text-clr);
     color: var(--base-clr);
-    padding: 10px 15px;
+    padding: 5px 10px;
+
 }
 
 main {
     text-align: center;
 }
 
-        main h1.logo {
-            margin-top: clamp(350px, 20vh, 450px);
-            font-size: clamp(40px, 15vw, 100px);
-            font-weight: 800;
-            color: var(--text-clr);
-            animation: slideinTop 1.5s ease-in-out forwards;
-            
-            display: inline-flex; 
-            align-items: baseline;
-            justify-content: center;
-            cursor: pointer;
-            line-height: 1;
-            padding: 0 20px;
-        }
+main h1.logo {
+    margin-top: clamp(350px, 20vh, 450px);
+    font-size: clamp(40px, 15vw, 100px);
+    font-weight: 800;
+    color: var(--text-clr);
+    animation: slideinTop 1.5s ease-in-out forwards;
 
-        
-        .checkpoint-target {
-            position: relative;
-            display: inline-block;
-            width: 0.25em; 
-            height: 0.25em;
-            margin-left: 0.05em; 
-        }
-
-       
-        .dot {
-            width: 0.22em; 
-            height: 0.22em;
-            background-color: var(--text-clr);
-            border-radius: 50%;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            z-index: 2;
-            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-     
-        .pole {
-            width: 0.06em; 
-            height: 0; 
-            background-color: var(--text-clr);
-            position: absolute;
-            bottom: 0.11em; 
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 2px;
-            transition: height 0.4s ease-out;
-            z-index: 1;
-        }
-
-        .flag {
-            position: absolute;
-            top: 0.05em; 
-            
-  
-            right: 50%; 
-            left: auto; 
-            
-            width: 0;      
-            height: 0.5em; 
-            background-color: var(--flag-clr);
-            
-           
-            clip-path: polygon(100% 0, 0 50%, 100% 100%);
-            
-           
-            transform-origin: right center;
-            
-            transition: width 0.3s ease-in-out 0.3s, opacity 0.3s ease-in-out 0.3s;
-            opacity: 0;
-        }
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 20px;
+}
 
 
-        main h1.logo:hover .pole, 
-        main h1.logo.active .pole {
-            height: 1.2em; 
-        }
+.checkpoint-target {
+    position: relative;
+    display: inline-block;
+    width: 0.25em;
+    height: 0.25em;
+    margin-left: 0.05em;
+}
 
-        main h1.logo:hover .flag, 
-        main h1.logo.active .flag {
-            
-            width: 0.8em;
-            opacity: 1;
-            animation: wave 1s infinite ease-in-out alternate 0.5s;
-        }
 
-        main h1.logo:hover .dot, 
-        main h1.logo.active .dot {
-            transform: scale(1.2);
-        }
+.dot {
+    width: 0.22em;
+    height: 0.22em;
+    background-color: var(--text-clr);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
-        
-        @keyframes wave {
-            0% { transform: skewY(0deg); }
-            50% { transform: skewY(-10deg); }
-            100% { transform: skewY(0deg); }
-        }
 
-      
-        .login-btn {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 1rem;
-            cursor: pointer;
-        }
+.pole {
+    width: 0.06em;
+    height: 0;
+    background-color: var(--text-clr);
+    position: absolute;
+    bottom: 0.11em;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    transition: height 0.4s ease-out;
+    z-index: 1;
+}
+
+.flag {
+    position: absolute;
+    top: 0.05em;
+
+
+    right: 50%;
+    left: auto;
+
+    width: 0;
+    height: 0.5em;
+    background-color: var(--flag-clr);
+
+
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+
+
+    transform-origin: right center;
+
+    transition: width 0.3s ease-in-out 0.3s, opacity 0.3s ease-in-out 0.3s;
+    opacity: 0;
+}
+
+
+main h1.logo:hover .pole,
+main h1.logo.active .pole {
+    height: 1.2em;
+}
+
+main h1.logo:hover .flag,
+main h1.logo.active .flag {
+
+    width: 0.8em;
+    opacity: 1;
+    animation: wave 1s infinite ease-in-out alternate 0.5s;
+}
+
+main h1.logo:hover .dot,
+main h1.logo.active .dot {
+    transform: scale(1.2);
+}
+
+
+@keyframes wave {
+    0% {
+        transform: skewY(0deg);
+    }
+
+    50% {
+        transform: skewY(-10deg);
+    }
+
+    100% {
+        transform: skewY(0deg);
+    }
+}
+
+
 
 
 main dl {
 
-    width: min(90%, 400px);
+    width: min(90%, 600px);
     height: clamp(150px, 40vh, 220px);
     text-align: left;
     display: inline-block;
     vertical-align: top;
-    margin: 40px 10px;
+    margin: 7em 3em;
     padding: 20px;
-    border: 1px solid var(--line-clr);
-    border-radius: 20px;
     opacity: 0;
     transform: translateX(-100%);
 }
 
 main dl dt {
-    font-size: clamp(16px, 5vw, 20px);
+    font-size: clamp(16px, 5vw, 2em);
 }
 
 main dl p,
@@ -211,21 +213,18 @@ main dl span {
 }
 
 .login-btn {
-    margin: 20px auto 0;
+    margin: 40px auto 0;
     display: block;
     padding: 15px 30px;
     font-size: clamp(16px, 4vw, 20px);
-    border-radius: 10px;
-    background-color: var(--text-clr);
+    background-color: var(--btn-clr);
     border: none;
     cursor: pointer;
     transition: all 0.35s ease-in-out;
     animation: slideinTop 1.5s ease-in-out forwards;
-}
-
-.login-btn a {
-    text-decoration: none;
-    color: black;
+    color: var(--text-clr);
+    font-size: 1.5em;
+    font-weight: 800;
 }
 
 .login-btn:hover {
@@ -279,6 +278,7 @@ main dl span {
         transform: translateX(-100%);
         opacity: 0;
     }
+
     to {
         transform: translateX(0);
         opacity: 1;
@@ -290,6 +290,7 @@ main dl span {
         transform: translateX(100%);
         opacity: 0;
     }
+
     to {
         transform: translateX(0);
         opacity: 1;
@@ -301,9 +302,97 @@ main dl span {
         transform: translateY(-300%);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
     }
 }
 
+
+.site-footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 60px 40px 20px 40px;
+    margin-top: 10em;
+
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.footer-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+.footer-newsletter {
+    flex: 1;
+}
+
+.footer-newsletter label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+}
+
+.input-group {
+    display: flex;
+}
+
+.input-group input {
+    padding: 12px;
+    border: none;
+    width: 250px;
+    font-size: 0.9rem;
+}
+
+.signup-btn {
+    background-color: #34a8eb;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Horizontal Link Styles */
+.footer-links {
+    display: flex;
+    flex: 2;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+
+.footer-divider {
+    border: 0;
+    border-top: 1px solid #333;
+    margin-bottom: 25px;
+}
+
+.footer-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #ccc;
+}
+
+.scroll-top {
+    color: #ccc;
+    text-decoration: none;
+    text-transform: uppercase;
+}

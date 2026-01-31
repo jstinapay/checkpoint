@@ -1,71 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 
-    <main> 
+    <main>
         <section class="hero">
-           <nav class="navbar">
-        <ul>    
-            <li><a class= "active" href="index.html">Home</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="gamebrain-tutorial-app-code.html">Games</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="profile.html">Profile</a></li>
-        </ul>
-    </nav>
-        
-        <h1 class="logo" onclick="this.classList.toggle('active')">
-        checkpoint
-        <span class="checkpoint-target">
-            <span class="pole"><span class="flag"></span></span>
-            <span class="dot"></span>
-        </span>
-    </h1>
+            <nav class="navbar">
+                <ul>
+                    <li><a class="active" href="index.html">HOME</a></li>
+                    <li><a href="hub.html">HUB</a></li>
+                    <li><a href="games.html">GAMES</a></li>
+                    <li><a href="register.html">REGISTER</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                </ul>
+            </nav>
 
-    <button class="login-btn">login</button>
+            <h1 id="logoTrigger" class="logo" onclick="this.classList.toggle('active')">
+                checkpoint
+                <span class="checkpoint-target">
+                    <span class="pole"><span class="flag"></span></span>
+                    <span class="dot"></span>
+                </span>
+            </h1>
+
+            <button class="login-btn" onclick="window.location.href='register.html'"><strong>GET
+                    STARTED</strong></button>
 
         </section>
 
         <dl class="slideInLeft">
-            <dt>What is <span>checkpoint</span>?</dt>
+            <dt><strong>CREATE WAYPOINT THREADS</strong></dt>
             <dd>
-        <p>checkpoint is a gaming review website that allows users to read and write reviews on their favorite games. Users can create profiles, track their gaming history, and connect with other gamers.</p>
-        </dd>
+                <p>Waypoints are the heartbeat of the Checkpoint application. They are our re-imagining of the standard
+                    "forum thread”. Create waypoints to spark meaningful discussion among the community.</p>
+            </dd>
         </dl>
 
-        <dl class = "slideInRight">
-            <dt>Why use <span>checkpoint</span>?</dt>
+        <dl class="slideInRight">
+            <img src="https://placehold.co/400x300" alt="placeholder image">
+        </dl>
+
+        <br>
+
+        <dl class="slideInLeft">
+            <img src="https://placehold.co/400x300" alt="placeholder image">
+        </dl>
+
+        <dl class="slideInRight">
+            <dt style="text-align: right;"><strong>REAL OPINIONS FROM REAL PLAYERS</strong></dt>
             <dd>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure enim illo quidem magnam architecto vel animi quo quaerat veritatis praesentium! Provident laudantium consequuntur beatae. Sit aliquid impedit quasi deleniti cum.</p>
+                <p> Write reviews that matter. We provide the structure, you express your experience. Reviews from users
+                    with a high score are visually highlighted, ensuring credible voices stands out.</p>
             </dd>
         </dl>
 
         <br>
 
         <dl class="slideInLeft">
-            <dt>How does <span>checkpoint</span> work?</dt>
+            <dt><strong>SETTLE YOUR SCORE</strong></dt>
             <dd>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quidem. Quisquam neque, dicta repellendus laboriosam magnam cumque possimus, sint harum aperiam, modi doloribus. Quisquam, quidem. Quisquam neque, dicta </p>
+                <p>On checkpoint, your reputation matters. Earn “Score” by creating helpful Waypoints and writing
+                    insightful reviews. The community decides your worth.</p>
             </dd>
         </dl>
 
         <dl class="slideInRight">
-            <dt>Who can use <span>checkpoint</span>?</dt>
+            <img src="https://placehold.co/400x300" alt="placeholder image">
+
+        </dl>
+
+        <br>
+
+        <dl class="slideInLeft">
+            <img src="https://placehold.co/400x300" alt="placeholder image">
+
+        </dl>
+
+        <dl class="slideInRight">
+            <dt style="text-align: right;"><strong>STEP INTO THE HUB</strong></dt>
             <dd>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab officia, esse repudiandae hic earum, ducimus sequi voluptates harum commodi vero delectus magnam eius fuga id pariatur cupiditate, nobis itaque similique.</p>
+                <p>One Feed. Infinite Discussions. No more jumping between websites. “The Hub” brings it all together.
+                    View a seamless stream of reviews and Waypoints in one place. The hub is also customizable by you,
+                    so you only see what you need to see.</p>
             </dd>
         </dl>
- 
+
+        <br>
+
+        <dl class="slideInLeft">
+            <dt><strong>SHOWCASE THAT TASTE</strong></dt>
+            <dd>
+                <p>Your profile is your log of contributions. Customize your Bio and Picture and curate your Top 5
+                    Favorite Games to show the community exactly what kind of game you are.</p>
+            </dd>
+        </dl>
+
+        <dl class="slideInRight">
+            <img src="https://placehold.co/400x300" alt="placeholder image">
+
+        </dl>
+
+
 
     </main>
 
-<script src="main.js"></script>
+    <script src="main.js"></script>
+
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-top-row">
+                <div class="footer-newsletter">
+                    <label for="email">Subscribe to our emails</label>
+                    <div class="input-group">
+                        <input type="email" id="email" placeholder="email@example.com">
+                        <button type="submit" class="signup-btn">SIGN UP</button>
+                    </div>
+                </div>
+
+                <nav class="footer-links">
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Github</a>
+                </nav>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom-row">
+                <p>Powered by Fully Stacked Developers &copy;</p>
+                <a href="#top" class="scroll-top">SCROLL TO TOP</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
+
 </html>

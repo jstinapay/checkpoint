@@ -11,14 +11,44 @@ const observer = new IntersectionObserver((entries) => {
 
 sections.forEach(section => observer.observe(section));
 
-
-const darkModeToggle = document.getElementById('dark-mode-toggle');
-darkModeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-});
-
 const logo = document.getElementById('logoTrigger');
+const startBtn = document.querySelector('.login-btn');
+
+
 logo.addEventListener('click', () => {
     logo.classList.toggle('active');
+});
 
-        });
+
+let hoveringLogo = false;
+let hoveringStart = false;
+
+function updateActiveState() {
+    if (hoveringLogo || hoveringStart) {
+        logo.classList.add('active');
+    } else {
+        logo.classList.remove('active');
+    }
+}
+
+if (logo) {
+    logo.addEventListener('mouseenter', () => {
+        hoveringLogo = true;
+        updateActiveState();
+    });
+    logo.addEventListener('mouseleave', () => {
+        hoveringLogo = false;
+        updateActiveState();
+    });
+}
+
+if (startBtn) {
+    startBtn.addEventListener('mouseenter', () => {
+        hoveringStart = true;
+        updateActiveState();
+    });
+    startBtn.addEventListener('mouseleave', () => {
+        hoveringStart = false;
+        updateActiveState();
+    });
+}
