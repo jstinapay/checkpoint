@@ -321,7 +321,7 @@ main dl span {
 }
 
 .register-page .site-footer {
-    margin-top: 0;
+    margin-top: 11em;
 }
 
 .footer-container {
@@ -558,7 +558,7 @@ main dl span {
     width: 1000px;
     height: 800px;
     min-height: 800px;
-    background-image: url('masterchief.png');
+    background-image: url('images/masterchief.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -754,7 +754,7 @@ main dl span {
 }
 
 .login-page .site-footer {
-    margin-top: 0;
+    margin-top: 10em;
 }
 
 .login-hero {
@@ -764,6 +764,7 @@ main dl span {
     position: relative;
     overflow: hidden;
     animation: pageSlideIn 0.6s ease-out;
+    margin-top: 0;
 }
 
 .login-container {
@@ -877,7 +878,7 @@ main dl span {
     width: 1000px;
     height: 800px;
     min-height: 800px;
-    background-image: url('kratos.png');
+    background-image: url('images/kratos.png');
     background-size: 143%;
     background-repeat: no-repeat;
     background-position: 35% bottom;
