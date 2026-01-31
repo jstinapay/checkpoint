@@ -523,6 +523,15 @@ main dl span {
     font-size: 0.95rem;
     margin-top: 0;
     opacity: 0.8;
+    text-decoration: none;
+    background: 
+        linear-gradient(90deg, transparent, currentColor, transparent) 
+        bottom /var(--d, 0) 3px no-repeat;
+    transition: 0.5s;
+}
+
+.login-link:hover {
+    --d: 100%;
 }
 
 .form-bottom {
@@ -845,11 +854,14 @@ main dl span {
     margin-top: 0;
     opacity: 0.8;
     text-decoration: none;
+    background: 
+        linear-gradient(90deg, transparent, currentColor, transparent) 
+        bottom /var(--d, 0) 3px no-repeat;
+    transition: 0.5s;
 }
 
 .register-link:hover {
-    color: var(--btn-clr);
-    text-decoration: underline;
+    --d: 100%;
 }
 
 .logo-overlay-login {
