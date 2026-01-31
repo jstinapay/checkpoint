@@ -479,10 +479,6 @@ main dl span {
     outline: none;
 }
 
-.form-group input:focus {
-    box-shadow: 0 0 0 2px var(--btn-clr);
-}
-
 .register-btn {
     width: 200px;
     height: 50px;
@@ -496,11 +492,30 @@ main dl span {
     cursor: pointer;
     margin-top: 0;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.register-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(-45deg, transparent 40%, rgba(255,255,255,0.3) 0 60%, transparent 0);
+    background-size: 300% 100%;
+    background-position: right;
+    transition: background-position 0.8s ease;
+}
+
+.register-btn:hover::before {
+    background-position: left;
 }
 
 .register-btn:hover {
-    background-color: #0099dd;
-    transform: translateY(-1px);
+    transform: translateY(-1px) scale(1.02);
+    filter: drop-shadow(0 4px 8px rgba(0, 170, 255, 0.3));
 }
 
 .login-link {
@@ -798,11 +813,30 @@ main dl span {
     cursor: pointer;
     margin-top: 0;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-btn-submit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(-45deg, transparent 40%, rgba(255,255,255,0.3) 0 60%, transparent 0);
+    background-size: 300% 100%;
+    background-position: right;
+    transition: background-position 0.8s ease;
+}
+
+.login-btn-submit:hover::before {
+    background-position: left;
 }
 
 .login-btn-submit:hover {
-    background-color: #0099dd;
-    transform: translateY(-1px);
+    transform: translateY(-1px) scale(1.02);
+    filter: drop-shadow(0 4px 8px rgba(0, 170, 255, 0.3));
 }
 
 .register-link {
