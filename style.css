@@ -320,6 +320,10 @@ main dl span {
 
 }
 
+.register-page .site-footer {
+    margin-top: 0;
+}
+
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -397,4 +401,315 @@ main dl span {
     color: #ccc;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+.register-hero {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.register-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 60px 60px 0;
+    gap: 100px;
+}
+
+.register-form-section {
+    max-width: 500px;
+    justify-self: start;
+    margin-left: 250px;
+    margin-top: 50px;
+}
+
+.register-title {
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 15px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin-left: -100px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 4px;
+    text-align: left;
+    align-self: flex-start;
+}
+
+.required {
+    color: red;
+    margin-left: 2px;
+}
+
+.form-group input {
+    width: 600px;
+    max-width: 2000px;
+    height: 50px;
+    padding: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    outline: none;
+}
+
+.form-group input:focus {
+    box-shadow: 0 0 0 2px var(--btn-clr);
+}
+
+.register-btn {
+    width: 200px;
+    height: 50px;
+    background-color: var(--btn-clr);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    margin-top: 0;
+    transition: all 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color: #0099dd;
+    transform: translateY(-1px);
+}
+
+.login-link {
+    color: white;
+    font-size: 0.95rem;
+    margin-top: 0;
+    opacity: 0.8;
+}
+
+.form-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+    width: 600px;
+}
+
+.register-visual {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    justify-self: end;
+}
+
+.logo-overlay {
+    position: absolute;
+    top: 0%;
+    right: 5%;
+    font-size: 10rem;
+    font-weight: 400;
+    color: white;
+    z-index: 0;
+    letter-spacing: -0.03em;
+    transform: rotate(-18deg);
+}
+
+.character-image {
+    width: 1000px;
+    height: 800px;
+    min-height: 800px;
+    background-image: url('masterchief.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    filter: brightness(0.9) contrast(1.1);
+    margin-bottom: 0;
+}
+
+.register-footer {
+    margin-top: auto;
+    padding: 40px 60px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-top: 1px solid #333;
+}
+
+.newsletter-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    font-size: 1rem;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 0;
+}
+
+.newsletter-form input {
+    width: 250px;
+    height: 40px;
+    padding: 12px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    font-family: "Poppins", sans-serif;
+    outline: none;
+}
+
+.sign-up-btn {
+    height: 40px;
+    padding: 0 24px;
+    background-color: var(--btn-clr);
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sign-up-btn:hover {
+    background-color: #0099dd;
+}
+
+.footer-links {
+    display: flex;
+    gap: 40px;
+    justify-content: flex-end;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--btn-clr);
+}
+
+.footer-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.scroll-to-top {
+    color: #999;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    color: white;
+}
+
+@media (max-width: 1200px) {
+    .register-container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        text-align: center;
+        padding: 0 40px;
+    }
+    
+    .register-form-section {
+        margin-left: 0;
+        max-width: 100%;
+        justify-self: center;
+    }
+    
+    .register-visual {
+        justify-self: center;
+    }
+    
+    .logo-overlay {
+        font-size: 4rem;
+        top: 10%;
+        right: 20%;
+    }
+    
+    .character-image {
+        width: 400px;
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .register-container {
+        padding: 0 20px;
+    }
+    
+    .register-title {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+    
+    .form-group input {
+        max-width: 100%;
+    }
+    
+    .register-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .logo-overlay {
+        font-size: 2.5rem;
+        top: 5%;
+        right: 10%;
+    }
+    
+    .character-image {
+        width: 300px;
+        height: 350px;
+    }
+    
+    .newsletter-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .footer-links {
+        justify-content: flex-start;
+        gap: 20px;
+    }
+    
+    .footer-text {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
 }

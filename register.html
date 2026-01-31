@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Checkpoint</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="register-page">
+    <main>
+        <section class="register-hero">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="hub.html">HUB</a></li>
+                    <li><a href="games.html">GAMES</a></li>
+                </ul>
+            </nav>
+
+            <div class="register-container">
+                <div class="register-form-section">
+                    <h1 class="register-title">Register</h1>
+                    
+                    <form class="register-form">
+                        <div class="form-group">
+                            <label for="username">Username<span class="required">*</span></label>
+                            <input type="text" id="username" name="username" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email<span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password<span class="required">*</span></label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        
+                        <div class="form-bottom">
+                            <button type="submit" class="register-btn">REGISTER</button>
+                            <a href="login.html" class="login-link">Already have an account?</a>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="register-visual">
+                    <h1 class="logo-overlay">checkpoint.</h1>
+                    <div class="character-image">
+                        <!-- Character image will be styled with CSS -->
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-top-row">
+                <div class="footer-newsletter">
+                    <label for="email">Subscribe to our emails</label>
+                    <div class="input-group">
+                        <input type="email" id="email" placeholder="email@example.com">
+                        <button type="submit" class="signup-btn">SIGN UP</button>
+                    </div>
+                </div>
+
+                <nav class="footer-links">
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Github</a>
+                </nav>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom-row">
+                <p>Powered by Fully Stacked Developers &copy;</p>
+                <a href="#top" class="scroll-top">SCROLL TO TOP</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
