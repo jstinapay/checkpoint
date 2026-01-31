@@ -437,7 +437,7 @@ main dl span {
     margin-bottom: 15px;
     letter-spacing: -0.02em;
     text-align: left;
-    margin-left: -100px;
+    margin-left: -85px;
 }
 
 .register-form {
@@ -529,10 +529,10 @@ main dl span {
 
 .logo-overlay {
     position: absolute;
-    top: 0%;
-    right: 5%;
-    font-size: 10rem;
-    font-weight: 400;
+    top: 2%;
+    right: 8%;
+    font-size: 9rem;
+    font-weight: 600;
     color: white;
     z-index: 0;
     letter-spacing: -0.03em;
@@ -735,5 +735,163 @@ main dl span {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+.login-page .site-footer {
+    margin-top: 0;
+}
+
+.login-hero {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    animation: pageSlideIn 0.6s ease-out;
+}
+
+.login-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 60px 60px 0;
+    gap: 100px;
+    animation: contentFadeIn 0.8s ease-out 0.2s both;
+}
+
+.login-form-section {
+    max-width: 500px;
+    justify-self: start;
+    margin-left: 250px;
+    margin-top: 50px;
+}
+
+.login-title {
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 15px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin-left: -85px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.login-btn-submit {
+    width: 200px;
+    height: 50px;
+    background-color: var(--btn-clr);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    margin-top: 0;
+    transition: all 0.3s ease;
+}
+
+.login-btn-submit:hover {
+    background-color: #0099dd;
+    transform: translateY(-1px);
+}
+
+.register-link {
+    color: white;
+    font-size: 0.95rem;
+    margin-top: 0;
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.register-link:hover {
+    color: var(--btn-clr);
+    text-decoration: underline;
+}
+
+.logo-overlay-login {
+    position: absolute;
+    top: 4%;
+    right: 6%;
+    font-size: 9rem;
+    font-weight: 600;
+    color: white;
+    z-index: 0;
+    letter-spacing: -0.03em;
+    transform: rotate(10deg);
+}
+
+.login-visual {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    justify-self: end;
+}
+
+.character-image-login {
+    width: 1000px;
+    height: 800px;
+    min-height: 800px;
+    background-image: url('kratos.png');
+    background-size: 143%;
+    background-repeat: no-repeat;
+    background-position: 35% bottom;
+    filter: brightness(0.9) contrast(1.1);
+    margin-bottom: 0;
+}
+
+@media (max-width: 1200px) {
+    .login-container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        text-align: center;
+        padding: 0 40px;
+    }
+    
+    .login-form-section {
+        margin-left: 0;
+        max-width: 100%;
+        justify-self: center;
+    }
+    
+    .login-visual {
+        justify-self: center;
+    }
+    
+    .character-image-login {
+        width: 400px;
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        padding: 0 20px;
+    }
+    
+    .login-title {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+    
+    .login-btn-submit {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .character-image-login {
+        width: 300px;
+        height: 350px;
     }
 }
