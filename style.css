@@ -529,7 +529,7 @@ main dl span {
 
 .logo-overlay {
     position: absolute;
-    top: 2%;
+    top: 3%;
     right: 8%;
     font-size: 9rem;
     font-weight: 600;
@@ -820,7 +820,7 @@ main dl span {
 
 .logo-overlay-login {
     position: absolute;
-    top: 4%;
+    top: 5%;
     right: 6%;
     font-size: 9rem;
     font-weight: 600;
