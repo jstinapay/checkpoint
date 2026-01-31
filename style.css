@@ -68,7 +68,7 @@ main {
 }
 
 main h1.logo {
-    margin-top: clamp(350px, 20vh, 450px);
+    margin-top: clamp(300px, 20vh, 450px);
     font-size: clamp(40px, 15vw, 100px);
     font-weight: 800;
     color: var(--text-clr);
@@ -80,6 +80,7 @@ main h1.logo {
     cursor: pointer;
     line-height: 1;
     padding: 0 20px;
+    letter-spacing: 5px;
 }
 
 
@@ -215,7 +216,7 @@ main dl span {
 .login-btn {
     margin: 40px auto 0;
     display: block;
-    padding: 15px 30px;
+    padding: 8px 25px;
     font-size: clamp(16px, 4vw, 20px);
     background-color: var(--btn-clr);
     border: none;
@@ -240,6 +241,7 @@ main dl span {
 
 
 .hero {
+    margin-top: 10px;
     height: 100vh;
     width: 100%;
 }
