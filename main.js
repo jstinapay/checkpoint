@@ -11,17 +11,14 @@ const observer = new IntersectionObserver((entries) => {
 
 sections.forEach(section => observer.observe(section));
 
-//burger
-const burger = document.querySelector('.burger');
-const navLinks = document.querySelector('.nav-links');
 
-burger.addEventListener('click', () => {
-    navLinks.classList.toggle('nav-active');
-    burger.classList.toggle('toggle');
-});
-
-// Dark mode toggle
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 darkModeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
 });
+
+const logo = document.getElementById('logoTrigger');
+logo.addEventListener('click', () => {
+    logo.classList.toggle('active');
+
+        });

@@ -4,6 +4,7 @@
     --base-clr: black;
     --line-clr: rgb(39, 35, 35);
     --text-clr: white;
+    --flag-clr: white;
 }
 
 * {
@@ -64,13 +65,112 @@ main {
     text-align: center;
 }
 
-main h1.logo {
-    margin-top: clamp(300px, 20vh, 450px);
-    font-size: clamp(40px, 15vw, 100px);
-    font-weight: 800;
-    animation: slideinTop 1.5s ease-in-out forwards;
-    padding: 0 20px;
-}
+        main h1.logo {
+            margin-top: clamp(300px, 20vh, 450px);
+            font-size: clamp(40px, 15vw, 100px);
+            font-weight: 800;
+            color: var(--text-clr);
+            animation: slideinTop 1.5s ease-in-out forwards;
+            
+            display: inline-flex; 
+            align-items: baseline;
+            justify-content: center;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0 20px;
+        }
+
+        
+        .checkpoint-target {
+            position: relative;
+            display: inline-block;
+            width: 0.25em; 
+            height: 0.25em;
+            margin-left: 0.05em; 
+        }
+
+       
+        .dot {
+            width: 0.22em; 
+            height: 0.22em;
+            background-color: var(--text-clr);
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+     
+        .pole {
+            width: 0.06em; 
+            height: 0; 
+            background-color: var(--text-clr);
+            position: absolute;
+            bottom: 0.11em; 
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+            transition: height 0.4s ease-out;
+            z-index: 1;
+        }
+
+        .flag {
+            position: absolute;
+            top: 0.05em; 
+            
+  
+            right: 50%; 
+            left: auto; 
+            
+            width: 0;      
+            height: 0.5em; 
+            background-color: var(--flag-clr);
+            
+           
+            clip-path: polygon(100% 0, 0 50%, 100% 100%);
+            
+           
+            transform-origin: right center;
+            
+            transition: width 0.3s ease-in-out 0.3s, opacity 0.3s ease-in-out 0.3s;
+            opacity: 0;
+        }
+
+
+        main h1.logo:hover .pole, 
+        main h1.logo.active .pole {
+            height: 1.2em; 
+        }
+
+        main h1.logo:hover .flag, 
+        main h1.logo.active .flag {
+            
+            width: 0.8em;
+            opacity: 1;
+            animation: wave 1s infinite ease-in-out alternate 0.5s;
+        }
+
+        main h1.logo:hover .dot, 
+        main h1.logo.active .dot {
+            transform: scale(1.2);
+        }
+
+        
+        @keyframes wave {
+            0% { transform: skewY(0deg); }
+            50% { transform: skewY(-10deg); }
+            100% { transform: skewY(0deg); }
+        }
+
+      
+        .login-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
 
 
 main dl {
@@ -138,38 +238,7 @@ main dl span {
     color: white;
 }
 
-@keyframes slideInLeft {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
 
-@keyframes slideInRight {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slideinTop {
-    from {
-        transform: translateY(-300%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
 
 .hero {
     height: 100vh;
@@ -203,3 +272,38 @@ main dl span {
         margin-top: 100px;
     }
 }
+
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideinTop {
+    from {
+        transform: translateY(-300%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
