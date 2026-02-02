@@ -1172,3 +1172,328 @@ body.hub {
 .div3 {
     grid-area: 2 / 2 / 3 / 3;
 }
+
+.account-page {
+    background: #14131F;
+    min-height: 100vh;
+}
+
+.account-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+    max-width: 1400px;
+    margin: 40px auto 0;
+    width: 100%;
+}
+
+.account-hero {
+    position: relative;
+    flex: 1;
+    padding-top: 60px;
+    animation: pageSlideIn 0.6s ease-out;
+}
+
+.account-bg-text {
+    position: absolute;
+    top: 6%;
+    left: 64%;
+    transform: translate(-50%, -50%);
+    font-size: 6.3rem;
+    font-weight: 800;
+    color: #22203A;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    z-index: 0;
+    white-space: nowrap;
+    font-family: sans-serif;
+}
+
+.account-content {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: stretch;
+    min-height: 100px;
+    min-width: 500px;
+    animation: contentFadeIn 0.8s ease-out 0.2s both;
+}
+
+.score-section {
+    flex: 0 0 300px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+}
+
+.score-card {
+    background: #1A192B;
+    padding: 40px 30px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.score-card::before {
+    content: 'score';
+    position: absolute;
+    left: -70px;
+    top: 40%;
+    transform: translateY(-50%);
+    font-size: 8rem;
+    font-weight: 800;
+    color: #22203A;
+    z-index: -1;
+    pointer-events: none;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-family: "Poppins", sans-serif;
+    line-height: 0.75;
+    letter-spacing: -80px;
+}
+
+.score-label {
+    color: white;
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.score-number {
+    font-size: 8rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+    animation: glow 1.5s infinite alternate;
+    letter-spacing: -5px;
+}
+
+.score-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+    }
+    100% {
+        text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff, 0 0 80px #00d4ff, 0 0 160px #00d4ff;
+    }
+}
+
+.upvotes,
+.downvotes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+}
+
+.upvotes .vote-number {
+    color: #44669A;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.downvotes .vote-number {
+    color: #811C1C;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.vote-label {
+    color: #767499;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+}
+
+.profile-section {
+    flex: 0 1 1200px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+}
+
+.profile-container {
+    background: #1A192B;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    position: relative;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.profile-avatar {
+    flex-shrink: 0;
+}
+
+.avatar-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.profile-info {
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    gap: 2.5px;
+    padding-bottom: 80px;
+}
+
+.profile-username {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    line-height: 1.1;
+}
+
+.profile-bio {
+    color: white;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.edit-profile-btn {
+    background-color: #1A192B;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.edit-profile-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: var(--btn-clr);
+}
+
+.games-showcase {
+    position: relative;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.game-showcase-card {
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.game-showcase-card:hover {
+    transform: translateY(-4px);
+}
+
+.showcase-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.add-game-showcase {
+    aspect-ratio: 3/4;
+    background-color: #22203A;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-game-showcase:hover {
+    background-color: #2a2847;
+    transform: translateY(-2px);
+}
+
+.nav-user .user-dropdown.active {
+    background-color: #22203A;
+    padding: 8px 12px;
+}
+
+@media (max-width: 1200px) {
+    .account-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .score-section {
+        align-items: center;
+        padding-top: 20px;
+    }
+    
+    .account-bg-text {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .account-container {
+        padding: 0 20px;
+    }
+    
+    .account-bg-text {
+        font-size: 3rem;
+    }
+    
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .games-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .score-number {
+        font-size: 4rem;
+    }
+}
