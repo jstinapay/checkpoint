@@ -6,6 +6,8 @@
     --text-clr: white;
     --flag-clr: white;
     --btn-clr: #00AAFF;
+    --hub-background: #14131F;
+    --hub-box: #22203A;
 }
 
 * {
@@ -951,4 +953,143 @@ main dl span {
         width: 300px;
         height: 350px;
     }
+}
+
+body.hub {
+    background-color: var(--hub-background);
+}
+
+.bg-text {
+    margin-left: 300px;
+    position: absolute;
+    font-size: 8rem;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+.nav-user {
+    display: flex;
+    margin-left: 600px;
+    background-color: #333;
+
+    a {
+        display: flex;
+        text-decoration: none;
+        color: var(--text-clr);
+    }
+
+    span {
+        display: flex;
+    }
+}
+
+.user-dropdown {
+    background-color: var(--hub-box);
+    padding: 8px 15px;
+}
+
+.user-dropdown svg {
+    margin-left: 5px;
+    margin-top: 2.5px;
+}
+
+
+
+.search-bar input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    padding: 0 15px;
+}
+
+.search-bar input::placeholder {
+    color: #9ca3af;
+}
+
+.search-bar .icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.search-bar .icon:hover {
+    opacity: 1;
+}
+
+.search-bar:focus-within {
+    box-shadow: 0 0 0 2px rgba(0, 170, 255, 0.5);
+}
+
+.hero-section {
+    width: 100%;
+    padding: 10px 40px;
+    position: relative;
+}
+
+.search-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    margin-right: 16rem;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: var(--hub-box);
+    padding: 15px 15px;
+    border-radius: 50px;
+    width: clamp(250px, 90vw, 300px);
+}
+
+@media (max-width: 768px) {
+    .search-wrapper {
+        justify-content: center;
+        margin-right: 0;
+        padding: 0 20px;
+    }
+
+    .search-bar {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .hero-section {
+        padding: 10px 20px;
+    }
+}
+
+
+
+.hero-bg-text {
+    position: absolute;
+    top: 40px;
+    left: 2.5em;
+    font-size: 120px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.03);
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+.waypoint-container {
+    margin-top: 4em;
+    padding: 0 19em;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 3px;
+    justify-content: center;
+
+}
+
+.box {
+    background-color: var(--hub-box);
+    text-align: center;
 }
