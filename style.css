@@ -1046,6 +1046,7 @@ body.hub {
     padding: 15px 15px;
     border-radius: 50px;
     width: clamp(250px, 90vw, 300px);
+    animation: contentFadeIn 0.8s ease-out 0.2s both;
 }
 
 @media (max-width: 768px) {
@@ -1076,6 +1077,7 @@ body.hub {
     color: rgba(255, 255, 255, 0.03);
     z-index: -1;
     pointer-events: none;
+    animation: contentFadeIn 0.8s ease-out 0.2s both;
 }
 
 
@@ -1085,6 +1087,8 @@ body.hub {
     display: grid;
     grid-template-columns: 50% 50%;
     gap: 3px;
+    animation: contentFadeIn 0.8s ease-out 0.2s both;
+
 
 
 }
@@ -1163,6 +1167,15 @@ body.hub {
         padding: 8em 6em;
     }
 
+}
+
+.add-btn {
+    --btn-hover-transition-duration: 0.5s;
+    transition: all var(--btn-hover-transition-duration);
+}
+
+.add-btn:hover {
+    background: var(--btn-clr);
 }
 .div2 {
     margin-top: 2em;
