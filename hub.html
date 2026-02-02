@@ -92,19 +92,58 @@
     </div>
 
     <div class="box">
-      <h3>MOST POPULAR TITLES</h3>
-      <p>hellowewe</p>
+      <h3>POPULAR TITLES</h3>
+      <div class="carousel-container">
 
-    </div>
+        <div class="carousel-wrapper">
+          <button class="nav-button prev" onclick="moveCarousel(-1)"></button>
 
+          <div class="carousel-track" id="carouselTrack">
+            <div class="carousel-item">
+              <div class="game-card">
+                <img src="images/genshin.png" class="game-image">
+                <div class="game-title">Genshin Impact</div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="game-card">
+                <img src="images/dispatch.png" alt="Dispatch" class="game-image">
+                <div class="game-title">Dispatch</div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="game-card">
+                <img src="images/silenthill.png" alt="Silent Hill f" class="game-image">
+                <div class="game-title">Silent Hill f</div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="game-card">
+                <img src="images/kratos.png" alt="Another Game" class="game-image">
+                <div class="game-title">God of War</div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="game-card">
+                <img src="images/masterchief.png" alt="Mystery Quest" class="game-image">
+                <div class="game-title">Halo</div>
+              </div>
+            </div>
+          </div>
+
+          <button class="nav-button next" onclick="moveCarousel(1)"></button>
+        </div>
+      </div>
     </div>
+    <script src="carousel.js"></script>
   </section>
 
 
 </main>
-
-
-
 
 
 

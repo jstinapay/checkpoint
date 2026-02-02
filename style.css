@@ -1082,21 +1082,28 @@ body.hub {
 
 
 .waypoint-container {
-    margin-top: 4em;
-    padding: 0 19em;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    gap: 3px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    max-width: 1400px;
+    margin: 4em auto 0;
+    width: 100%;
     animation: contentFadeIn 0.8s ease-out 0.2s both;
-
-
 
 }
 
+@media (max-width: 1200px) {
+    .waypoint-container {
+        flex-direction: column;
+    }
+}
+
 .box {
+    flex: 1;
     background-color: var(--hub-box);
     text-align: left;
     padding: 1em 2em;
+
 }
 
 
@@ -1508,5 +1515,132 @@ body.hub {
     
     .score-number {
         font-size: 4rem;
+    }
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 5em auto;
+
+}
+
+.carousel-wrapper {
+    overflow: hidden;
+
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    gap: 30px;
+}
+
+.carousel-item {
+    flex: 0 0 calc(33.333% - 20px);
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.carousel-item:hover {
+    transform: translateY(-10px);
+}
+
+.game-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.game-image {
+    width: 100%;
+    aspect-ratio: 9/16;
+    object-fit: cover;
+    display: block;
+}
+
+.game-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+
+.nav-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.nav-button.prev {
+    left: 15px;
+}
+
+.nav-button.next {
+    right: 15px;
+}
+
+.nav-button::before {
+    content: '';
+    display: block;
+}
+
+.prev::before {
+    content: '‹';
+}
+
+.next::before {
+    content: '›';
+}
+
+@media (max-width: 968px) {
+    .carousel-item {
+        flex: 0 0 calc(50% - 15px);
+    }
+
+    .carousel-wrapper {
+        padding: 40px 60px;
+    }
+}
+
+@media (max-width: 640px) {
+    .carousel-item {
+        flex: 0 0 100%;
+    }
+
+    .carousel-wrapper {
+        padding: 30px 50px;
+    }
+
+    .game-title {
+        font-size: 1.1rem;
+        padding: 15px;
     }
 }
