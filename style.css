@@ -777,6 +777,7 @@ main dl span {
 }
 
 /*Login Page*/
+
 .login-page .site-footer {
     margin-top: 0;
 }
@@ -1408,6 +1409,8 @@ body.hub {
 .div3 {
     grid-area: 2 / 2 / 3 / 3;
 }
+
+/*Account Page*/
 
 .account-page {
     background: #14131F;
@@ -2419,5 +2422,215 @@ body.hub {
     .waypoint-thumbnail {
         max-width: 250px;
         margin: 0 auto;
+    }
+}
+
+/*Games Page*/
+
+.games-main {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
+}
+
+.games-header-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-right: 125px;
+}
+
+.games-header-actions .search-bar {
+    background-color: #22203A;
+    width: 350px;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.games-header-actions .search-bar input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    flex: 1;
+    padding: 0 10px;
+}
+
+.games-header-actions .search-bar input::placeholder {
+    color: #aeb0b8;
+    opacity: 1;
+}
+
+.games-header-actions .search-bar .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    fill: #767499;
+    transition: fill 0.3s ease;
+}
+
+.games-header-actions .search-bar .icon:hover {
+    fill: white;
+}
+
+.menu-icon {
+    opacity: 0.7;
+}
+
+.search-icon {
+    opacity: 0.7;
+}
+
+.category-section {
+    position: relative;
+    margin-top: 80px;
+    padding-bottom: 20px;
+}
+
+.category-title-left {
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 800;
+    color: #22203A;
+    text-align: left;
+    line-height: 1;
+    margin-bottom: 20px;;
+    padding-left: 0;
+    position: relative;
+    z-index: 0;
+    letter-spacing: -2px;
+}
+
+.category-title-right {
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 800;
+    color: #22203A;
+    text-align: right;
+    line-height: 1;
+    margin-bottom: 20px;;
+    padding-left: 0;
+    position: relative;
+    z-index: 0;
+    letter-spacing: -2px;
+}
+
+.full-width {
+    background-color: #1A192B;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1600px;
+    padding: 0 40px;
+}
+
+.cards-container {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.game-poster {
+    flex: 1;
+    aspect-ratio: 3/4;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid transparent;
+}
+
+.game-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.game-poster:hover {
+    transform: translateY(-10px);
+    z-index: 2;
+}
+
+.game-poster.active,
+.game-poster:hover {
+    border-color: #00AAFF;
+    box-shadow: 0 0 20px rgba(0, 170, 255, 0.3);
+}
+
+.nav-arrow {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.nav-arrow img {
+    width: 40px;
+    height: auto;
+    display: block;
+}
+
+.nav-arrow:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+    .cards-container {
+        gap: 15px;
+    }
+
+    .category-title {
+        font-size: 4rem;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .games-header-actions {
+        justify-content: center;
+    }
+    
+    .cards-container {
+        overflow-x: auto;
+        padding-bottom: 20px;
+    }
+    
+    .game-poster {
+        min-width: 150px; 
+    }
+    
+    .nav-arrow {
+        display: none; 
     }
 }
