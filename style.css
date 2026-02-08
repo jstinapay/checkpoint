@@ -2427,6 +2427,11 @@ body.hub {
 
 /*Games Page*/
 
+.games-page {
+    background: #14131F;
+    min-height: 100vh;
+}
+
 .games-main {
     max-width: 1600px;
     margin: 0 auto;
