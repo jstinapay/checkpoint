@@ -1129,19 +1129,39 @@ body.hub {
 
 .waypoint-dropdown {
     display: flex;
-    font-size: 15px;
+    text-align: center;
     align-items: center;
     margin-left: 0.5em;
     background: white;
     border-radius: 20px;
-    padding: 0.1em 0.01em 0 0.5em;
+    padding: 5px 30px;
     color: black;
+    font-size: 1rem;
+    font-weight: 600;
 
-    svg {
-        margin-left: 0.5em;
-        color: black;
-    }
 }
+
+.waypoint-dropdown:hover {
+    border-color: var(--btn-clr);
+    background-color: var(--accent-clr);
+    transform: translateY(-1px);
+}
+
+.waypoint-dropdown:focus {
+    border-color: var(--btn-clr);
+    box-shadow: 0 0 0 3px rgba(0, 170, 255, 0.1);
+    border-radius: 20px;
+}
+
+.waypoint-dropdown option {
+    background-color: var(--hub-box);
+    color: var(--text-clr);
+    padding: 8px 12px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+
+}
+
 
 .title-form {
     margin-top: 1em;
@@ -1849,7 +1869,6 @@ body.hub {
 .user-avatar {
     width: 24px;
     height: 24px;
-    border-radius: 50%;
     object-fit: cover;
 }
 
@@ -1876,6 +1895,7 @@ body.hub {
     font-weight: 600;
     text-transform: uppercase;
     font-size: 0.75rem;
+    margin-left: auto;
 }
 
 .waypoint-title-text {
@@ -1901,6 +1921,7 @@ body.hub {
 .interaction-count {
     color: #767499;
     font-size: 0.85rem;
+    margin-top: 10em;
 }
 
 .join-btn {
@@ -1912,6 +1933,7 @@ body.hub {
     font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-top: 10em;
 }
 
 .join-btn:hover {
