@@ -958,6 +958,160 @@ main dl span {
     }
 }
 
+.character-image-about {
+    width: 600px;
+    height: 700px;
+    min-height: 500px;
+    background-image: url('images/jin.png');
+    background-size: 113%;
+    background-repeat: no-repeat;
+    background-position: 35% bottom;
+    filter: brightness(0.9) contrast(1.1);
+    margin-bottom: 0;
+    margin-right: 200px;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 60px 60px 0;
+    gap: 100px;
+    animation: contentFadeIn 0.8s ease-out 0.2s both;
+}
+
+.about-form-section {
+    max-width: 800px;
+    justify-self: start;
+    margin-left: 0px;
+    margin-top: 50px;
+}
+
+.about-title {
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 15px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin-left: 200px;
+}
+
+.about-content {
+    max-width: 1000px;
+    margin-top: 10px;
+    margin-left: 250px;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.character-image-contact {
+    width: 600px;
+    height: 700px;
+    min-height: 500px;
+    background-image: url('images/leon.png');
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: 35% bottom;
+    filter: brightness(0.9) contrast(1.1);
+    margin-bottom: 0;
+    margin-right: 200px;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 60px 60px 0;
+    gap: 100px;
+    animation: contentFadeIn 0.8s ease-out 0.2s both;
+}
+
+.contact-form-section {
+    max-width: 800px;
+    justify-self: start;
+    margin-left: 0px;
+    margin-top: 50px;
+}
+
+.contact-title {
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 15px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin-left: 200px;
+}
+
+.contact-content {
+    max-width: 1000px;
+    margin-top: 10px;
+    margin-left: 250px;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.contact-icons {
+    position: relative;
+    height: 400px;
+    margin-top: 40px;
+    margin-left: 200px;
+}
+
+.contact-icon {
+    position: absolute;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.contact-icon:hover {
+    transform: translateY(-3px) scale(1.1);
+    opacity: 0.8;
+}
+
+.contact-icon img {
+    width: 300px;
+    height: 150px;
+    object-fit: contain;
+    filter: brightness(0.9) contrast(1.1);
+}
+
+.contact-icon:hover img {
+    filter: brightness(1.1) contrast(1.2);
+}
+
+.github-icon {
+    top: 0;
+    left: 0;
+}
+
+.mail-icon {
+    top: 0;
+    left: 190px;
+}
+
+.facebook-icon {
+    top: 0;
+    left: 355px;
+}
+
+.logo-overlay-contact {
+    position: absolute;
+    top: 34%;
+    right: 24%;
+    font-size: 6rem;
+    font-weight: 600;
+    color: white;
+    z-index: 0;
+    letter-spacing: -0.03em;
+    transform: rotate(-90deg);
+}
+
 body.hub {
     background-color: var(--hub-background);
 }
