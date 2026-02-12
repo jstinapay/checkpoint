@@ -1627,6 +1627,7 @@ body.hub {
     color: white;
     font-size: 1rem;
     line-height: 1.4;
+    margin-left: 5px;
 }
 
 .edit-profile-btn {
@@ -2868,4 +2869,54 @@ body.hub {
     .nav-arrow {
         display: none; 
     }
+}
+
+.read-more {
+    color: #00AAFF;
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.read-more:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.bubble-text {
+    margin-top: 10px;
+    position: absolute;
+    right: -120px;
+    bottom: -20px;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-weight: 800;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    z-index: 20;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.wp-chat-bubble-btn:hover .bubble-text,
+.rv-chat-bubble-btn:hover .bubble-text {
+    transform: scale(1.05) translateY(-2px);
+}
+
+.spoiler {
+    color: transparent;
+    text-shadow: 0 0 12px #00AAFF;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.spoiler:hover {
+    color: #8f8f9f;
+    text-shadow: none;
+    user-select: text;
 }
