@@ -3138,3 +3138,8 @@ body.hub {
     z-index: 1; 
 }
 
+.user-link {
+    text-decoration: none;
+
+}
+
