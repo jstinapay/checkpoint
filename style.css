@@ -2588,6 +2588,7 @@ body.hub {
 
 .game-status {
     color: #999;
+    margin-left: 3.5em;
 }
 
 .star-count {
