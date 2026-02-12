@@ -3041,4 +3041,27 @@ body.hub {
     transform: scale(1.1);
 }
 
+.post-actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 20px;
+
+    button {
+        background-color: var(--accent-clr);
+        color: white;
+        border: none;
+        padding: 10px 50px;
+        
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    button:hover {
+        background-color: white;
+        color: var(--accent-clr);
+        transform: scale(1.05);
+    }
+}
+
 
