@@ -1319,6 +1319,42 @@ body.hub {
 
 }
 
+.review-dropdown {
+    margin-top: 0.3em;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    background: var(--hub-background);
+    border-radius: 20px;
+    border: none;
+    padding: 5px 30px;
+    color: var(--text-clr);
+    font-size: 1rem;
+    font-weight: 600;
+
+}
+
+.review-dropdown:hover {
+    border-color: var(--btn-clr);
+    background-color: var(--accent-clr);
+    transform: translateY(-1px);
+}
+
+.review-dropdown:focus {
+    border-color: var(--btn-clr);
+    box-shadow: 0 0 0 3px rgba(0, 170, 255, 0.1);
+    border-radius: 20px;
+}
+
+.review-dropdown option {
+    background-color: var(--hub-box);
+    color: var(--text-clr);
+    padding: 8px 12px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+
+}
+
 
 .title-form {
     margin-top: 1em;
@@ -2549,6 +2585,16 @@ body.hub {
     font-weight: 600;
 }
 
+.game-status {
+    color: #999;
+}
+
+.star-count {
+    color: var(--text-clr);
+    font-weight: 800;
+    margin-left: .5em;
+}
+
 .timestamp {
     color: #767499;
 }
@@ -2559,6 +2605,33 @@ body.hub {
     text-transform: uppercase;
     font-size: 0.75rem;
     margin-left: auto;
+}
+
+.star-ratings {
+    display: flex;
+    gap: 3px;
+    margin-left: auto;
+    
+
+    div {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: black;
+    font-size: 14px;
+    transition: transform 0.2s, background-color 0.2s;
+    
+    }
+
+    .filled { 
+        background-color: indigo;
+    }
+    
 }
 
 .waypoint-title-text {
@@ -2572,13 +2645,18 @@ body.hub {
     color: #ccc;
     line-height: 1.6;
     font-size: 0.95rem;
+
+
 }
+
+    .spoiler {
+        filter: blur(4px);
+    }
 
 .waypoint-footer {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
+    align-items:flex-end;
 }
 
 .interaction-count {
@@ -2920,3 +2998,48 @@ body.hub {
     text-shadow: none;
     user-select: text;
 }
+
+.form-header {
+    display:flex;
+    margin-top: 2em;
+}
+
+.rating-group {
+    display: flex;
+    flex-direction: row-reverse; 
+    justify-content: flex-end;
+    flex-wrap: wrap; 
+}
+
+.rating-group .label {
+    width: 100%;
+    text-align: left; 
+}
+
+
+.rating-group input {
+    display: none;
+}
+
+.rating-group label {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: black;
+    font-size: 18px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.rating-group input:checked ~ label,
+.rating-group label:hover,
+.rating-group label:hover ~ label {
+    background-color: indigo;
+    transform: scale(1.1);
+}
+
+
