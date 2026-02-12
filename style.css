@@ -1883,6 +1883,7 @@ body.hub {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    margin-bottom: 2em;
 }
 
 .review-wrapper {
@@ -2649,9 +2650,6 @@ body.hub {
 
 }
 
-    .spoiler {
-        filter: blur(4px);
-    }
 
 .waypoint-footer {
     display: flex;
