@@ -2220,6 +2220,8 @@ body.hub {
     .rv-poster {
         display: none; 
     }
+
+ 
     
     .wp-title,
     .rv-title {
@@ -3143,3 +3145,21 @@ body.hub {
 
 }
 
+.game-about {
+    background: var(--hub-box);
+    
+}
+
+.game-card {
+    display: flex;
+    justify-content: center;
+}
+
+.ga-poster img {
+    height: 400px;
+    width: 300px;
+}
+
+.ga-main {
+    display: flex;
+}
