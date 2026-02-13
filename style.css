@@ -1167,7 +1167,6 @@ body.hub {
 }
 
 
-
 .search-bar input {
     flex: 1;
     background: transparent;
@@ -1244,7 +1243,7 @@ body.hub {
 .hero-bg-text {
     position: absolute;
     top: 40px;
-    left: 2.5em;
+    left: 1em;
     font-size: 120px;
     font-weight: 900;
     color: var(--accent-clr);
@@ -2411,7 +2410,7 @@ body.hub {
 .hero-bg-text2 {
     position: absolute;
     top: 6.94em;
-    left: 2.5em;
+    left: 1em;
     font-size: 120px;
     font-weight: 900;
     color: var(--accent-clr);
@@ -2423,6 +2422,22 @@ body.hub {
         color: var(--text-clr);
     }
 }
+
+.hero-bg-text3 {
+    position: absolute;
+    left: 1em;
+    font-size: 120px;
+    font-weight: 900;
+    color: var(--accent-clr);
+    z-index: -1;
+    pointer-events: none;
+    animation: contentFadeIn 0.8s ease-out 0.2s both;
+
+    span {
+        color: var(--text-clr);
+    }
+}
+
 .waypoints-section {
     margin-top: 40px;
     padding: 40px;
@@ -3162,4 +3177,8 @@ body.hub {
 
 .ga-main {
     display: flex;
+}
+
+.hero-bg-text2 a {
+    text-decoration: none;
 }
